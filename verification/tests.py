@@ -1,24 +1,25 @@
 init_code = """
-if not "a" in USER_GLOBAL:
-    raise NotImplementedError("Where is 'a' variable?")
+if not "robots" in USER_GLOBAL:
+    raise NotImplementedError("Where is 'robots' variable?")
 
-if not "b" in USER_GLOBAL:
-    raise NotImplementedError("Where is 'b' variable?")
-    
-a = USER_GLOBAL['a']
-b = USER_GLOBAL['b']
+robots = USER_GLOBAL['robots']    
 
-if not isinstance(a, int):
-    raise TypeError("'a' variable must be an integer")
+if not isinstance(robots, int):
+    raise TypeError("'robots' variable must be an integer")
 
-if not isinstance(b, int):
-    raise TypeError("'b' variable must be an integer")
+if robots != 2:
+    raise ValueError("'robots' variable must have a value of 2")    
 
-if a != 2:
-    raise ValueError("'a' variable must have a value of 2")
+if not "droids" in USER_GLOBAL:
+    raise NotImplementedError("Where is 'droids' variable?")
 
-if b != 5:
-    raise ValueError("'b' variable must have a value of 5")
+droids = USER_GLOBAL['droids']
+
+if not isinstance(droids, int):
+    raise TypeError("'droids' variable must be an integer")
+
+if droids != 5:
+    raise ValueError("'droids' variable must have a value of 5")
 """
 
 run_test = """

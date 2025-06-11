@@ -9,15 +9,4 @@ api.add_listener(
     ON_CONNECT,
     CheckiORefereeCode(
         tests=TESTS,
-        # checker=to_list,
-        # function_name={
-        #     "python": "sum_two",
-        #     "js": "sumTwo"
-        # },
-        # cover_code={
-        #     'python-3': {},
-        #     'js-node': {
-        #         # "dateForZeros": True,
-        #     }
-        # }
     ).on_ready)
